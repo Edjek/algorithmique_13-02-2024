@@ -1,10 +1,9 @@
 /* --------------------------- Les Commentaires --------------------------- */
 
 // Un commentaire en Javascript
-
 /*
-Un commentaire multiligne
-en Javascript
+    Un commentaire multiligne
+    en Javascript
 */
 
 /* --------------------------- Affichage --------------------------- */
@@ -14,18 +13,20 @@ console.log('Hello, world!');
 
 /* --------------------------- Les Variables --------------------------- */
 
-// Declaration d'une variable
+// Déclaration d'une variable
 let uneVariable;
 
-// Affectation d'une variable
+// Affectation d'une valeur à une variable
 uneVariable = 'Je suis une variable!';
 
 // Les 2 se font généralement en même temps
-// Les variables sont sensibles à la casse
+// Les variables sont sensibles à la casse (majuscules =/= minuscules )
 let helloWorld = 'Hello, World!';
 helloWorld = uneVariable;
-console.log(helloWorld);
 let HELLOWORLD;
+
+// Affichage d'une variable dans la console
+console.log(helloWorld);
 
 uneVariable = 'Je suis une nouvelle variable!';
 
@@ -43,9 +44,9 @@ let boolean2 = false;
 // Affecter à sum l'opération de multiplication des 2 variables précédentes
 // Afficher le resultat en console
 let sum;
-let number1 = 10
-let number2 = 20
-sum = number1 * number2
+let number1 = 10;
+let number2 = 20;
+sum = number1 * number2;
 console.log(sum);
 
 /* --------------------------- La Concatenation --------------------------- */
@@ -53,13 +54,15 @@ console.log(sum);
 let firstName = 'Rachid';
 let lastName = 'EDJEKOUANE';
 
-// Déclarer une variable city, afficher le message "j'adore vivre à <city>"
+// Pour déclarer une chaine de caractère on peux utiliser ('', "", ``)
+// Cela a un impact sur la façon de concatener les variables et les chaines de caractères
 let city = 'PARIS';
-city = 'PARIS';
+city = "PARIS";
 city = `PARIS`;
 
+// Déclarer une variable city, afficher le message "j'adore vivre à <city>"
 console.log("j'adore vivre à " + city);
-console.log("j'adore vivre à " + city);
+console.log('j\'adore vivre à ' + city);
 
 // Modifier le message pour afficher j'adore vivre à <city> et je m'appelle <firstName> <lastName>
 console.log(`j'adore vivre à ${city} et je m'appelle ${firstName} ${lastName}`);
