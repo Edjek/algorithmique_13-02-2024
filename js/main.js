@@ -164,8 +164,15 @@ if (nat == 'français') {
 let i = 0;
 while (i < 10) {
     let res = i * 7;
-    i = i + 1;
     console.log(`${i} x 7 = ${res}`);
+    i = i + 1;
 }
 
-// Afficher la table de multiplication de 7
+// Ecrire un algorithme qui inverse les valeurs de deux variables A et B quel que soit le contenu de A et de B
+let a = 10;
+let b = 99;
+console.log(a, b);
+let c = a;
+a = b;
+b = c;
+console.log(a, b, c);
