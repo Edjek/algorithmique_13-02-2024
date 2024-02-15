@@ -1,9 +1,11 @@
-/* --------------------------- LES COMMENTAIRES --------------------------- */
+/* ------------------------------------------------------------
+                    LES COMMENTAIRES
+    ------------------------------------------------------------ */
 
 /*
     Un commentaire est un texte qui ne sera pas exécuté par le navigateur
     Il permet de documenter le code, de le rendre plus lisible
-    Il permet de désactiver une partie du code
+    Il permet de désactiver une partie du code pour faire des tests
 */
 
 // Un commentaire sur une ligne en Javascript
@@ -13,7 +15,9 @@
     en Javascript
 */
 
-/* --------------------------- L'AFFICHAGE --------------------------- */
+/*  ------------------------------------------------------------
+                                       L'AFFICHAGE
+    ------------------------------------------------------------ */
 
 // Afficher un message dans la console de debbugage du navigateur
 // On utilise la fonction console.log()
@@ -28,7 +32,9 @@ console.log('Hello, world!');
 // let response = prompt('Quel est votre age???');
 // console.log(response);
 
-/* --------------------------- LES VARIABLES --------------------------- */
+/*  ------------------------------------------------------------
+                                       LES VARIABLES
+    ------------------------------------------------------------ */
 
 /*
     Les variables ne peuvent pas commencer par un chiffre
@@ -56,7 +62,18 @@ console.log(messageBonjour);
 // On peut changer la valeur d'une variable
 uneVariable = 'Je suis une nouvelle variable!';
 
-/* --------------------------- LES TYPES DE VARIABLE --------------------------- */
+// Ecrire un algorithme qui inverse les valeurs de deux variables A et B quel que soit le contenu de A et de B
+let a = 10;
+let b = 99;
+
+let temp = a;
+a = b;
+b = temp;
+console.log(a, b);
+
+/*  ------------------------------------------------------------
+                                   LES TYPES DE VARIABLE
+    ------------------------------------------------------------ */
 
 // Les types les plus courants sont :
 
@@ -78,26 +95,43 @@ let number2 = 20;
 sum = number1 * number2;
 console.log(sum);
 
-/* --------------------------- LA CONCATENATION --------------------------- */
+/*  ------------------------------------------------------------
+                    LA CONCATENATION
+    ------------------------------------------------------------ */
+
+/*
+    Pour déclarer une chaine de caractère on peux utiliser ('', "", ``)
+    Cela a un impact sur la façon de concatener les variables et les chaines de caractères
+*/
 
 let lastName = 'EDJEKOUANE';
 let firstName = 'Rachid';
-
-// Pour déclarer une chaine de caractère on peux utiliser ('', "", ``)
-// Cela a un impact sur la façon de concatener les variables et les chaines de caractères
 let city = 'PARIS';
-city = 'PARIS';
-city = `PARIS`;
 
 // Déclarer une variable city, afficher le message "j'adore vivre à <city>"
 console.log("j'adore vivre à " + city);
 console.log("j'adore vivre à " + city);
+
+// Concatenation avec l'opérateur +
+console.log(
+    "j'adore vivre à " + city + " et je m'appelle " + firstName + ' ' + lastName
+);
+
+// Concatenation avec l'opérateur ${}
 console.log(`j'adore vivre à ${city}`);
 
 // Modifier le message pour afficher j'adore vivre à <city> et je m'appelle <firstName> <lastName>
 console.log(`j'adore vivre à ${city} et je m'appelle ${firstName} ${lastName}`);
 
-/* --------------------------- LES INSTRUCTIONS CONDITIONNELLES --------------------------- */
+/*  ------------------------------------------------------------
+                    LES INSTRUCTIONS CONDITIONNELLES
+    ------------------------------------------------------------ */
+
+// Les instructions conditionnelles permettent d'exécuter des blocs de code en fonction de conditions
+
+// if (condition) { ... } : si la condition est vraie le bloc d'instruction est exécuté
+// else if (condition) { ... } : sinon si la condition est vraie le bloc d'instruction est exécuté
+// else { ... } : sinon le bloc d'instruction est exécuté
 
 // Demander à l'utilisateur s'il accepte les CGV
 // let acceptCgv = prompt('Acceptez-vous les CGV?');
@@ -109,8 +143,6 @@ if (acceptCgv == 'ok') {
 } else {
     console.log("Vous n'avez pas acceptez les conditions!");
 }
-
-// if, else if, else : (Si, Sinon Si, Sinon)
 
 /*
     Si la condition est vraie le premier bloc d'instruction est exécuté
@@ -129,12 +161,18 @@ if (acceptCgv == 'yes') {
 
 console.log('la suite...');
 
-/* --------------------------- LES OPERATEURS DE COMPARAISON --------------------------- */
+/*  ------------------------------------------------------------
+                    LES OPERATEURS DE COMPARAISON
+    ------------------------------------------------------------ */
 
 /*
     Les opérateurs de comparaison permettent de comparer deux valeurs
     Ils renvoient un résultat booléen (true, false)
 */
+
+let x = 10;
+let y = 10;
+console.log(x == y);
 
 /*
     (> ou >=) supérieur ou supérieur ou égal à
@@ -144,13 +182,9 @@ console.log('la suite...');
     (!==) strictement différent de
 */
 
-// (==) égal à
-let x = 10;
-let y = 10;
-
-console.log(x == y);
-
-/* --------------------------- LES OPERATEURS LOGIQUE --------------------------- */
+/*  ------------------------------------------------------------
+                    LES OPERATEURS LOGIQUE
+    ------------------------------------------------------------ */
 
 // Les opérateurs logiques permettent de combiner plusieurs conditions
 
@@ -202,7 +236,9 @@ if (nationality2 == 'français') {
     console.log("Vous n'avez aucun droit");
 }
 
-/* --------------------------- LES BOUCLES --------------------------- */
+/*  ------------------------------------------------------------
+                    LES BOUCLES (LOOPS)
+    ------------------------------------------------------------ */
 
 /*
     Les boucles sont des structures permettant d'executer plusieurs fois des instructions
@@ -251,9 +287,13 @@ while (agadir < marrakech) {
     year = year + 1;
 
     // Sucre syntaxique pour incrementer une variable
-    /* Le sucre syntaxique est un concept en programmation qui fait référence à des fonctionnalités ou des constructions de langage qui permettent d'écrire du code de manière plus concise ou plus expressive, sans ajouter de nouvelles fonctionnalités à proprement parler.
+    /*
+        Le sucre syntaxique est un concept en programmation informatique
+        qui fait référence à des fonctionnalités ou des constructions de langage
+        qui permettent d'écrire du code de manière plus concise ou plus expressive,
+        sans ajouter de nouvelles fonctionnalités à proprement parler.
     */
-    // year1 +=1
+    // year1 += 1
     // year++;
 }
 
@@ -263,17 +303,9 @@ for (let i = 0; i < 10; i++) {
     console.log(`${i} x 7 = ${res}`);
 }
 
-// Ecrire un algorithme qui fait deviner un chiffre à l'utilisateur en lui indiquant si il est au dessus ou au dessous de la bonne valeur
-
-// Demande à l'utilisateur un nombre
-
-// Tant que la reponse n'est pas bonne
-// Si sa reponse est inferieur au chiffre magique
-// Le nombre magique est plus grand, donne moi une autre réponse
-// Sinon
-// Le nombre magique est plus petit, donne moi une autre réponse
-
-// Le nombre magique était bien
+/*
+    Ecrire un algorithme qui fait deviner un chiffre à l'utilisateur en lui indiquant si il est au dessus ou au dessous de la bonne valeur
+*/
 let magic = 135;
 let res = prompt('Donne moi ta réponse');
 
@@ -287,7 +319,9 @@ while (res != magic) {
 
 console.log('bravo');
 
-/* --------------------------- LES FONCTIONS --------------------------- */
+/*  ------------------------------------------------------------
+                        LES FONCTIONS
+    ------------------------------------------------------------ */
 
 /*
     Une fonction est un bloc d'instructions réutilisable
@@ -306,7 +340,7 @@ helloWorld();
 /*
     Une fonction renvoie un résultat avec le mot clé return
     Les autres variables déclarées dans la fonction sont locales à la fonction
-    Les autres instructions après le return ne sont pas exécutées
+    Les instructions après le return ne sont pas exécutées
 */
 function calculNasa() {
     let res = 65765765;
@@ -317,9 +351,8 @@ function calculNasa() {
     return solution;
 }
 
-// console.log(solution);
-
-let chaussette = calculNasa();
+let resultat = calculNasa();
+console.log(resultat);
 
 /*
     Une fonction peut prendre des paramètres
@@ -350,33 +383,12 @@ function helloYou(name) {
 let hello3 = helloYou('Rachid');
 console.log(hello3);
 
-// Ecrire une fonction qui prend un parametre et qui affiche Bonjour [le Prénom passé en parametre]
-
 // Écrire une fonction qui calcule la perimètre d'un carré et l'afficher
 
 // Algorithme qui calcule et affiche le carre d'un nombre
 
-// // Ecrire un algorithme qui inverse les valeurs de deux variables A et B quel que soit le contenu de A et de B
-// let a = 10;
-// let b = 99;
-
-// let temp = a;
-// a = b;
-// b = temp;
-// console.log(a, b);
-
-// // Boucle à itération definies (for) : pour un nombre de fois donné
-// for (let i = 0; i < 10; i++) {
-//     console.log(i);
-// }
-
 // // Ecrire un algorithme qui affiche les nombres pairs de 0 à 100
 // for (let i = 0; i <= 100; i += 2) {
-//     console.log(i);
-// }
-
-// // Ecrire un algorithme qui affiche les nombres impairs de 0 à 100
-// for (let i = 1; i <= 100; i += 2) {
 //     console.log(i);
 // }
 
@@ -387,22 +399,6 @@ console.log(hello3);
 
 // let resultat = addition(10, 20);
 // console.log(resultat);
-
-// // Ecrire une fonction qui prend en paramètre un nombre et renvoie le carré de ce nombre
-// function carre(nombre) {
-//     return nombre * nombre;
-// }
-
-// let res = carre(5);
-// console.log(res);
-
-// // Ecrire une fonction qui prend en paramètre un nombre et renvoie le double de ce nombre
-// function double(nombre) {
-//     return nombre * 2;
-// }
-
-// let res2 = double(5);
-// console.log(res2);
 
 // // Ecrire une fonction qui prend en paramètre un nombre et renvoie le triple de ce nombre
 // function triple(nombre) {
