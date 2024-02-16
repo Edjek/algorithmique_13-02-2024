@@ -88,6 +88,21 @@ let nombreDecimal = 20.5;
 let isTrue = true;
 let isFalse = false;
 
+// Déclarer une chaine de caractère, un nombre, booléen, null, undefined
+let varchar = 'salut tout le monde';
+let number = 2;
+let decimal = 20.3;
+let booleen = true;
+let nul = null;
+let indefini;
+
+console.log(typeof varchar);
+console.log(typeof number);
+console.log(typeof decimal);
+console.log(typeof booleen);
+console.log(typeof nul);
+console.log(typeof indefini);
+
 // Les opérations arithmétiques (+, -, *, /)
 let sum;
 let number1 = 10;
