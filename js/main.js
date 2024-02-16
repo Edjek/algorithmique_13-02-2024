@@ -269,7 +269,6 @@ while (revenu < 30000) {
     revenu = revenu + revenu * 0.1;
     year = year + 1;
 }
-
 console.log(`il faudra ${year} années, mon revenu sera de ${revenu} `);
 
 /*
@@ -317,7 +316,6 @@ while (res != magic) {
         res = prompt('trop grand');
     }
 }
-
 console.log('bravo');
 
 /*  ------------------------------------------------------------
@@ -351,7 +349,6 @@ function calculNasa() {
 
     return solution;
 }
-
 let resultat = calculNasa();
 console.log(resultat);
 
@@ -377,14 +374,14 @@ function hello() {
 
 hello();
 
+// Ecrire une fonction qui retourne Bonjour + le nom de la personne
 function helloYou(name) {
     return 'Bonjour ' + name;
 }
-
 let hello3 = helloYou('Rachid');
 console.log(hello3);
 
-// Écrire une fonction qui calcule le perimètre d'un carré et l'afficher
+// Ecrire une fonction qui retourne l'aire d'un carré
 function perimeter(x) {
     let resultat = x * 4;
     return resultat;
@@ -396,15 +393,14 @@ console.log(squarePerimeter);
 let squarePerimeter2 = perimeter(6786787);
 console.log(squarePerimeter2);
 
-// Algorithme qui calcule le carre d'un nombre
+// Ecrire une fonction qui retourne la puissance de 2 d'un nombre
 function powerTwo(x) {
     return x ** 2;
 }
-
 res = powerTwo(23);
 console.log(res);
 
-// Ecrire un algorithme qui affiche les nombres pairs de 0 à 100
+// Ecrire une boucle qui affiche les nombres pairs de 0 à 100
 for (let i = 0; i <= 100; i = i + 2) {
     console.log(i);
 }
@@ -415,29 +411,25 @@ function loop() {
         console.log(i);
     }
 }
-
 loop();
 
-// Transformez la fonction pour la rendre parametrable
-// Et pouvoir décider jusqu'a quel nombre la boucle se fait
+// Transformer la boucle en fonction avec un paramètre
 function loop(count) {
     for (let i = 0; i <= count; i = i + 2) {
         console.log(i);
     }
 }
-
 loop(120);
 
-// Je veux pouvoir parametrer le pas de ma boucle
+// Transformer la boucle en fonction avec 3 paramètres
 function loop(count, step, pas) {
     for (let i = pas; i <= count; i = i + step) {
         console.log(i);
     }
-
     return true;
 }
 
-// Une fonction peut effectuer des instructions et retourner ce qu'elle veut
+// Une fonction peut retourner un résultat avec le mot clé return
 let isOkay = loop(10, 3, 6);
 console.log(res);
 
@@ -469,20 +461,20 @@ let tableau = [
     [('php', 'algo', 'js', 'seo')],
 ];
 
-// On peut accéder à un élément du tableau en utilisant son index numérique (indice).
-// L'index du premier élément est 0.
+// Pour accéder à un élément d'un tableau, je précise l'indice
 console.log(week[0]);
 
-// Pour modifier la valeur d'un élément d'un tableau, je précise l'indice
+// Pour modifier un élément d'un tableau, je précise l'indice
 week[6] = 'test';
 console.log(week);
 
-// Pour connaitre la longueur d'un tableau nous pouvons utiliser la propriété .length
+// Pour connaitre la taille d'un tableau, on utilise la propriété length
 console.log(week.length);
 
 let animals = ['tigre', 'lion', 'panthere', 'aigle', 'chat', 'chien'];
 console.log(animals[0], animals[5]);
 
+// Pour itérer sur un tableau, on utilise une boucle for
 for (let i = 0; i < animals.length; i++) {
     console.log(animals[i]);
 }
@@ -492,7 +484,6 @@ function displayArrayAnimals() {
         console.log(animals[i]);
     }
 }
-
 displayArray();
 
 function displayArrayWithParameter(array) {
@@ -500,7 +491,6 @@ function displayArrayWithParameter(array) {
         console.log(array[i]);
     }
 }
-
 displayArrayWithParameter(week);
 displayArrayWithParameter(animals);
 
