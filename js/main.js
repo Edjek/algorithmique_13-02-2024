@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------
-                    LES COMMENTAIRES
+                        LES COMMENTAIRES
     ------------------------------------------------------------ */
 
 /*
@@ -16,7 +16,7 @@
 */
 
 /*  ------------------------------------------------------------
-                                       L'AFFICHAGE
+                            L'AFFICHAGE
     ------------------------------------------------------------ */
 
 // Afficher un message dans la console de debbugage du navigateur
@@ -33,7 +33,7 @@ console.log('Hello, world!');
 // console.log(response);
 
 /*  ------------------------------------------------------------
-                                       LES VARIABLES
+                            LES VARIABLES
     ------------------------------------------------------------ */
 
 /*
@@ -72,7 +72,7 @@ b = temp;
 console.log(a, b);
 
 /*  ------------------------------------------------------------
-                                   LES TYPES DE VARIABLE
+                        LES TYPES DE VARIABLE
     ------------------------------------------------------------ */
 
 // Les types les plus courants sont :
@@ -96,7 +96,7 @@ sum = number1 * number2;
 console.log(sum);
 
 /*  ------------------------------------------------------------
-                    LA CONCATENATION
+                        LA CONCATENATION
     ------------------------------------------------------------ */
 
 /*
@@ -183,7 +183,7 @@ console.log(x == y);
 */
 
 /*  ------------------------------------------------------------
-                    LES OPERATEURS LOGIQUE
+                        LES OPERATEURS LOGIQUES
     ------------------------------------------------------------ */
 
 // Les opérateurs logiques permettent de combiner plusieurs conditions
@@ -237,7 +237,7 @@ if (nationality2 == 'français') {
 }
 
 /*  ------------------------------------------------------------
-                    LES BOUCLES (LOOPS)
+                        LES BOUCLES (LOOPS)
     ------------------------------------------------------------ */
 
 /*
@@ -280,22 +280,23 @@ console.log(`il faudra ${year} années, mon revenu sera de ${revenu} `);
 let marrakech = 1000000;
 let agadir = 500000;
 let year1 = 0;
+
 while (agadir < marrakech) {
     agadir *= 1.08;
     marrakech += 50000;
-    console.log(`il faudra ${year1} années avant que..`);
     year = year + 1;
 
     // Sucre syntaxique pour incrementer une variable
     /*
-        Le sucre syntaxique est un concept en programmation informatique
-        qui fait référence à des fonctionnalités ou des constructions de langage
-        qui permettent d'écrire du code de manière plus concise ou plus expressive,
-        sans ajouter de nouvelles fonctionnalités à proprement parler.
+    Le sucre syntaxique est un concept en programmation informatique
+    qui fait référence à des fonctionnalités ou des constructions de langage
+    qui permettent d'écrire du code de manière plus concise ou plus expressive,
+    sans ajouter de nouvelles fonctionnalités à proprement parler.
     */
     // year1 += 1
     // year++;
 }
+console.log(`il faudra ${year1} années avant que...`);
 
 // Boucle à itération definies (for)
 for (let i = 0; i < 10; i++) {
@@ -320,7 +321,7 @@ while (res != magic) {
 console.log('bravo');
 
 /*  ------------------------------------------------------------
-                        LES FONCTIONS
+                            LES FONCTIONS
     ------------------------------------------------------------ */
 
 /*
@@ -383,35 +384,132 @@ function helloYou(name) {
 let hello3 = helloYou('Rachid');
 console.log(hello3);
 
-// Écrire une fonction qui calcule la perimètre d'un carré et l'afficher
+// Écrire une fonction qui calcule le perimètre d'un carré et l'afficher
+function perimeter(x) {
+    let resultat = x * 4;
+    return resultat;
+}
 
-// Algorithme qui calcule et affiche le carre d'un nombre
+let squarePerimeter = perimeter(67);
+console.log(squarePerimeter);
 
-// // Ecrire un algorithme qui affiche les nombres pairs de 0 à 100
-// for (let i = 0; i <= 100; i += 2) {
-//     console.log(i);
-// }
+let squarePerimeter2 = perimeter(6786787);
+console.log(squarePerimeter2);
 
-// // Fonction avec paramètres et renvoi d'une valeur
-// function addition(a, b) {
-//     return a + b;
-// }
+// Algorithme qui calcule le carre d'un nombre
+function powerTwo(x) {
+    return x ** 2;
+}
 
-// let resultat = addition(10, 20);
-// console.log(resultat);
+res = powerTwo(23);
+console.log(res);
 
-// // Ecrire une fonction qui prend en paramètre un nombre et renvoie le triple de ce nombre
-// function triple(nombre) {
-//     return nombre * 3;
-// }
+// Ecrire un algorithme qui affiche les nombres pairs de 0 à 100
+for (let i = 0; i <= 100; i = i + 2) {
+    console.log(i);
+}
 
-// let res3 = triple(5);
-// console.log(res3);
+// Transformer la boucle en fonction
+function loop() {
+    for (let i = 0; i <= 100; i = i + 2) {
+        console.log(i);
+    }
+}
 
-// // Ecrire une fonction qui prend en paramètre un nombre et renvoie le nombre suivant
-// function suivant(nombre) {
-//     return nombre + 1;
-// }
+loop();
 
-// let res4 = suivant(5);
-// console.log(res4);
+// Transformez la fonction pour la rendre parametrable
+// Et pouvoir décider jusqu'a quel nombre la boucle se fait
+function loop(count) {
+    for (let i = 0; i <= count; i = i + 2) {
+        console.log(i);
+    }
+}
+
+loop(120);
+
+// Je veux pouvoir parametrer le pas de ma boucle
+function loop(count, step, pas) {
+    for (let i = pas; i <= count; i = i + step) {
+        console.log(i);
+    }
+
+    return true;
+}
+
+// Une fonction peut effectuer des instructions et retourner ce qu'elle veut
+let isOkay = loop(10, 3, 6);
+console.log(res);
+
+/*  ------------------------------------------------------------
+                            LES TABLEAUX
+    ------------------------------------------------------------ */
+
+/*
+    Un tableau (array) est un type de donnée qui peut contenir plusieurs éléments
+    On peut créer un tableau en utilisant des crochets [] et en y insérant les éléments séparés par des virgules
+*/
+
+let week = [
+    'lundi',
+    'mardi',
+    'mercredi',
+    'jeudi',
+    'vendredi',
+    'samedi',
+    'dimanche',
+];
+
+// Un tableau peut contenir des éléments de types différents
+let tableau = [
+    'rachid',
+    'edjekouane',
+    '16 avril',
+    1983,
+    [('php', 'algo', 'js', 'seo')],
+];
+
+// On peut accéder à un élément du tableau en utilisant son index numérique (indice).
+// L'index du premier élément est 0.
+console.log(week[0]);
+
+// Pour modifier la valeur d'un élément d'un tableau, je précise l'indice
+week[6] = 'test';
+console.log(week);
+
+// Pour connaitre la longueur d'un tableau nous pouvons utiliser la propriété .length
+console.log(week.length);
+
+let animals = ['tigre', 'lion', 'panthere', 'aigle', 'chat', 'chien'];
+console.log(animals[0], animals[5]);
+
+for (let i = 0; i < animals.length; i++) {
+    console.log(animals[i]);
+}
+
+function displayArrayAnimals() {
+    for (let i = 0; i < animals.length; i++) {
+        console.log(animals[i]);
+    }
+}
+
+displayArray();
+
+function displayArrayWithParameter(array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+    }
+}
+
+displayArrayWithParameter(week);
+displayArrayWithParameter(animals);
+
+// Les tableaux peuvent contenir des tableaux (tableaux multidimensionnels)
+let notes = [
+    [12, 16, 19],
+    [9, 5, 4],
+    [12, 24, 7],
+];
+
+// Pour accéder à une note du tableau
+console.log(notes[1][2]);
